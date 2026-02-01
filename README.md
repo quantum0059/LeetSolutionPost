@@ -42,6 +42,4 @@ The extension analyzes your solution code and problem description, then uses AI 
 - Complete working code in 4 languages
 - Professional formatting matching top LeetCode contributors
 
-## License
 
-MIT
