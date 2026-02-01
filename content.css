@@ -1,0 +1,397 @@
+/* LeetCode Solution Post Generator - Content Script Styles */
+
+/* Generate Button */
+.lsp-generate-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+.lsp-generate-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(102, 126, 234, 0.4);
+}
+
+.lsp-generate-button.lsp-floating {
+  position: fixed;
+  bottom: 15px;
+  right: 400px; /* Positioned well away from LeetCode buttons */
+  z-index: 10000;
+  padding: 6px 12px;
+  font-size: 11px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Overlay */
+.lsp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+}
+
+/* Modal Container */
+.lsp-modal {
+  background: #1a1a2e;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.lsp-result-modal {
+  max-width: 900px;
+}
+
+/* Modal Header */
+.lsp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #16213e;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.lsp-modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.lsp-close-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.lsp-close-btn:hover {
+  color: #fff;
+}
+
+/* Modal Body */
+.lsp-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Sections */
+.lsp-section {
+  margin-bottom: 24px;
+}
+
+.lsp-section h3 {
+  color: #a0a0c0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px 0;
+}
+
+.lsp-problem-title {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  padding: 12px;
+  background: #16213e;
+  border-radius: 6px;
+}
+
+.lsp-title-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #16213e;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.lsp-title-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.lsp-hint {
+  color: #888;
+  font-size: 13px;
+  margin: 0 0 12px 0;
+}
+
+/* Solution Input */
+.lsp-solution-input {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.lsp-solution-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lsp-solution-header span {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.lsp-lang-select {
+  padding: 6px 12px;
+  background: #0f0f1a;
+  border: 1px solid #2a2a4a;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.lsp-remove-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lsp-remove-btn:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.lsp-code-textarea {
+  width: 100%;
+  height: 150px;
+  background: #0f0f1a;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 12px;
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.lsp-code-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.lsp-approach-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0f0f1a;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 13px;
+}
+
+.lsp-approach-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Add Button */
+.lsp-add-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px dashed #2a2a4a;
+  border-radius: 8px;
+  color: #667eea;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lsp-add-btn:hover {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+/* Checkbox Group */
+.lsp-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.lsp-checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e0e0e0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lsp-checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #667eea;
+}
+
+/* Options */
+.lsp-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e0e0e0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lsp-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #667eea;
+}
+
+/* Modal Footer */
+.lsp-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #16213e;
+  border-top: 1px solid #2a2a4a;
+}
+
+/* Buttons */
+.lsp-btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.lsp-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.lsp-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.lsp-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.lsp-btn-secondary {
+  background: #2a2a4a;
+  color: #e0e0e0;
+}
+
+.lsp-btn-secondary:hover {
+  background: #3a3a5a;
+}
+
+/* Result Modal */
+.lsp-result-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.lsp-result-textarea {
+  width: 100%;
+  height: 400px;
+  background: #0f0f1a;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 16px;
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.lsp-result-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Scrollbar */
+.lsp-modal-body::-webkit-scrollbar,
+.lsp-result-textarea::-webkit-scrollbar,
+.lsp-code-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lsp-modal-body::-webkit-scrollbar-track,
+.lsp-result-textarea::-webkit-scrollbar-track,
+.lsp-code-textarea::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+
+.lsp-modal-body::-webkit-scrollbar-thumb,
+.lsp-result-textarea::-webkit-scrollbar-thumb,
+.lsp-code-textarea::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 4px;
+}
+
+.lsp-modal-body::-webkit-scrollbar-thumb:hover,
+.lsp-result-textarea::-webkit-scrollbar-thumb:hover,
+.lsp-code-textarea::-webkit-scrollbar-thumb:hover {
+  background: #3a3a5a;
+}
+
+/* Notification Animation */
+@keyframes lsp-slide-up {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

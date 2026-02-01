@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode Solution Post Generator - Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 100vh;
+      color: #e0e0e0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .card {
+      background: #1e1e3f;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid #2a2a4a;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .card p {
+      color: #888;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #a0a0c0;
+    }
+
+    .form-group input[type="password"],
+    .form-group input[type="text"],
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 8px;
+      color: #e0e0e0;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-group input {
+      flex: 1;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #2a2a4a;
+      color: #e0e0e0;
+    }
+
+    .btn-secondary:hover {
+      background: #3a3a5a;
+    }
+
+    .btn-toggle {
+      background: transparent;
+      border: 1px solid #2a2a4a;
+      color: #888;
+      padding: 12px 16px;
+    }
+
+    .alert {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .alert-success {
+      background: rgba(39, 174, 96, 0.2);
+      border: 1px solid #27ae60;
+      color: #27ae60;
+    }
+
+    .alert-error {
+      background: rgba(231, 76, 60, 0.2);
+      border: 1px solid #e74c3c;
+      color: #e74c3c;
+    }
+
+    .alert-info {
+      background: rgba(102, 126, 234, 0.2);
+      border: 1px solid #667eea;
+      color: #a0a0ff;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .help-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .help-text a {
+      color: #667eea;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #667eea;
+    }
+
+    .divider {
+      height: 1px;
+      background: #2a2a4a;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>LeetCode Solution Post Generator</h1>
+      <p>Configure your extension settings</p>
+    </header>
+
+    <div id="status-alert" class="alert hidden"></div>
+
+    <!-- API Configuration -->
+    <div class="card">
+      <h2>API Configuration</h2>
+      <p>Enter your Google Gemini API key to enable AI-powered post generation. It's FREE!</p>
+      
+      <div class="form-group">
+        <label>Gemini API Key</label>
+        <div class="input-group">
+          <input type="password" id="api-key" placeholder="AIzaSy...">
+          <button class="btn btn-toggle" id="toggle-visibility">Show</button>
+        </div>
+        <p class="help-text">
+          Get your FREE API key from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label>AI Model</label>
+        <select id="model-select">
+          <option value="gemini-2.5-flash">Gemini 2.5 Flash (Recommended)</option>
+          <option value="gemini-2.0-flash-exp">Gemini 2.0 Flash</option>
+          <option value="gemini-1.5-flash-latest">Gemini 1.5 Flash</option>
+          <option value="gemini-1.5-pro-latest">Gemini 1.5 Pro</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" id="save-api">Save API Settings</button>
+    </div>
+
+    <!-- Default Settings -->
+    <div class="card">
+      <h2>Default Post Settings</h2>
+      <p>Configure default options for generated posts.</p>
+
+      <div class="form-group">
+        <label>Default Post Languages</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="default-lang" value="English" checked> English</label>
+          <label><input type="checkbox" name="default-lang" value="Hindi"> Hindi</label>
+          <label><input type="checkbox" name="default-lang" value="Chinese"> Chinese</label>
+          <label><input type="checkbox" name="default-lang" value="Spanish"> Spanish</label>
+          <label><input type="checkbox" name="default-lang" value="Japanese"> Japanese</label>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="auto-inject" checked>
+          Automatically fill LeetCode editor when post is generated
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="include-code" checked>
+          Include original code in generated post
+        </label>
+      </div>
+
+      <button class="btn btn-primary" id="save-defaults">Save Default Settings</button>
+    </div>
+
+    <!-- About -->
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        LeetCode Solution Post Generator v1.0.0<br><br>
+        This extension helps you create detailed, well-structured solution posts for LeetCode problems. 
+        Simply solve a problem, select your solution code(s), and let AI generate a comprehensive explanation 
+        with time/space complexity analysis.
+      </p>
+      <div class="divider"></div>
+      <p class="help-text">
+        Your API key is stored locally and never sent anywhere except directly to Google's Gemini API.
+      </p>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

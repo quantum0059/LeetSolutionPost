@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode Solution Post Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+        <span>LeetSolution Post</span>
+      </div>
+    </header>
+
+    <main class="popup-main">
+      <!-- Status Section -->
+      <div id="status-section" class="section">
+        <div id="status-message" class="status-box">
+          Checking page...
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="section">
+        <h3>Quick Actions</h3>
+        <button id="open-generator" class="action-btn primary-btn" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+          Open Post Generator
+        </button>
+        
+        <button id="scrape-code" class="action-btn secondary-btn" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          Grab Current Code
+        </button>
+      </div>
+
+      <!-- Settings Preview -->
+      <div class="section">
+        <h3>API Status</h3>
+        <div id="api-status" class="api-status">
+          <span class="status-indicator" id="api-indicator"></span>
+          <span id="api-text">Checking...</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="popup-footer">
+      <a href="#" id="open-options">Settings</a>
+      <span class="version">v1.0.0</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
