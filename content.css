@@ -1,6 +1,4 @@
-/* LeetCode Solution Post Generator - Content Script Styles */
 
-/* Generate Button */
 .lsp-generate-button {
   display: inline-flex;
   align-items: center;
@@ -26,14 +24,14 @@
 .lsp-generate-button.lsp-floating {
   position: fixed;
   bottom: 15px;
-  right: 400px; /* Positioned well away from LeetCode buttons */
+  right: 400px;
   z-index: 10000;
   padding: 6px 12px;
   font-size: 11px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Modal Overlay */
+
 .lsp-modal-overlay {
   position: fixed;
   top: 0;
@@ -48,7 +46,6 @@
   z-index: 100000;
 }
 
-/* Modal Container */
 .lsp-modal {
   background: #1a1a2e;
   border-radius: 12px;
@@ -65,7 +62,7 @@
   max-width: 900px;
 }
 
-/* Modal Header */
+
 .lsp-modal-header {
   display: flex;
   justify-content: space-between;
@@ -97,14 +94,14 @@
   color: #fff;
 }
 
-/* Modal Body */
+
 .lsp-modal-body {
   padding: 24px;
   overflow-y: auto;
   flex: 1;
 }
 
-/* Sections */
+
 .lsp-section {
   margin-bottom: 24px;
 }
@@ -148,7 +145,7 @@
   margin: 0 0 12px 0;
 }
 
-/* Solution Input */
+
 .lsp-solution-input {
   background: #16213e;
   border-radius: 8px;
@@ -230,7 +227,7 @@
   border-color: #667eea;
 }
 
-/* Add Button */
+
 .lsp-add-btn {
   width: 100%;
   padding: 12px;
@@ -248,7 +245,7 @@
   background: rgba(102, 126, 234, 0.1);
 }
 
-/* Checkbox Group */
+
 .lsp-checkbox-group {
   display: flex;
   flex-wrap: wrap;
@@ -270,7 +267,7 @@
   accent-color: #667eea;
 }
 
-/* Options */
+
 .lsp-option {
   display: flex;
   align-items: center;
@@ -286,7 +283,7 @@
   accent-color: #667eea;
 }
 
-/* Modal Footer */
+
 .lsp-modal-footer {
   display: flex;
   justify-content: flex-end;
@@ -296,7 +293,7 @@
   border-top: 1px solid #2a2a4a;
 }
 
-/* Buttons */
+
 .lsp-btn {
   padding: 10px 24px;
   border-radius: 6px;
@@ -332,7 +329,7 @@
   background: #3a3a5a;
 }
 
-/* Result Modal */
+
 .lsp-result-actions {
   display: flex;
   gap: 12px;
@@ -358,7 +355,7 @@
   border-color: #667eea;
 }
 
-/* Scrollbar */
+
 .lsp-modal-body::-webkit-scrollbar,
 .lsp-result-textarea::-webkit-scrollbar,
 .lsp-code-textarea::-webkit-scrollbar {
@@ -384,7 +381,7 @@
   background: #3a3a5a;
 }
 
-/* Notification Animation */
+
 @keyframes lsp-slide-up {
   from {
     opacity: 0;

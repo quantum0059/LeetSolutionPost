@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Check API key status
   checkApiStatus();
 
-  // Check if we're on a LeetCode problem page
+  
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   
   if (tab && tab.url && tab.url.includes('leetcode.com/problems/')) {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     statusMessage.classList.add('warning');
   }
 
-  // Open generator button
+  
   openGenerator.addEventListener('click', async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       await chrome.tabs.sendMessage(tab.id, { action: 'openSelector' });
       window.close();
     } catch (error) {
-      // Content script might not be loaded, inject it
+     
       await chrome.scripting.executeScript({
         target: { tabId: tab.id },
         files: ['content.js']
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         files: ['content.css']
       });
       
-      // Try again
+      
       setTimeout(async () => {
         await chrome.tabs.sendMessage(tab.id, { action: 'openSelector' });
         window.close();
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // Scrape code button
+ 
   scrapeCode.addEventListener('click', async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     
@@ -77,13 +77,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // Open options
+  
   openOptions.addEventListener('click', (e) => {
     e.preventDefault();
     chrome.runtime.openOptionsPage();
   });
 
-  // Check API status
+ 
   async function checkApiStatus() {
     const response = await chrome.runtime.sendMessage({ action: 'getApiKey' });
     

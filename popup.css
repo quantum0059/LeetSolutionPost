@@ -19,7 +19,6 @@ body {
   min-height: 100%;
 }
 
-/* Header */
 .popup-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 16px;
@@ -38,7 +37,7 @@ body {
   opacity: 0.9;
 }
 
-/* Main Content */
+
 .popup-main {
   padding: 16px;
   flex: 1;
@@ -56,7 +55,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Status Box */
+
 .status-box {
   padding: 12px 16px;
   background: #16213e;
@@ -81,7 +80,7 @@ body {
   color: #e74c3c;
 }
 
-/* Action Buttons */
+
 .action-btn {
   width: 100%;
   display: flex;
@@ -124,7 +123,7 @@ body {
   border-color: #667eea;
 }
 
-/* API Status */
+
 .api-status {
   display: flex;
   align-items: center;
@@ -161,7 +160,7 @@ body {
   text-decoration: underline;
 }
 
-/* Footer */
+
 .popup-footer {
   display: flex;
   justify-content: space-between;
