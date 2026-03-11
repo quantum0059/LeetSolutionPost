@@ -80,7 +80,6 @@ For example, if there are two approaches:
 At the very end of the post, AFTER the usual upvote sentence, add a tiny ASCII-art style cat asking for upvotes, for example:
 
 (\`=^.^=\`)  "If this helped, please upvote!"
-
 ---
 If this solution helped you, please **upvote** 👍 — it motivates me to write more easy-to-understand explanations!
 
